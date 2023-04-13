@@ -45,7 +45,7 @@ az_region = "westeurope"
 # Admin user for the created machines
 admin_user = "cloudadmin"
 
-# If BYOS images are used in the deployment, SCC registration code is required. Set `reg_code` and `reg_email` variables below
+# If BYOS (Bring Your Own Storage) images are used in the deployment, SCC registration code is required. Set `reg_code` and `reg_email` variables below
 # By default, all the images are PAYG, so these next parameters are not needed
 #reg_code = "<<REG_CODE>>"
 #reg_email = "<<your email>>"
