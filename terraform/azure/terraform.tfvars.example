@@ -8,12 +8,15 @@ az_region = "westeurope"
 
 # Use an already existing resource group
 #resource_group_name = "my-resource-group"
+resource_group_name = "Demo_sap_ha"
 
 # Use an already existing virtual network
 #vnet_name = "my-vnet"
+vnet_name = "vnet_sap_ha"
 
-# Use an already existing subnet in this virtual network
+# Use an already existing subnet in this virtual network , (Default: my-subnet)
 #subnet_name = "my-subnet"
+subnet_name = "my-subnet"
 
 # Use an already existing subnet for Netapp in this virtual network (optional, will be created otherwise)
 # subnet_netapp_name = "my-netapp-subnet"
