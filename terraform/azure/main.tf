@@ -11,6 +11,7 @@ module "local_execution" {
 # Majority Maker ip: 10.74.0.9
 # Hana cluster vip: 10.74.0.12
 # Hana cluster vip secondary: 10.74.0.13
+# DRBD opensource software that would allow you to build high-availability clusters for HANA database
 # DRBD ips: 10.74.0.6, 10.74.0.7
 # DRBD cluster vip: 10.74.0.8
 # Netweaver ips: 10.74.0.60, 10.74.0.61, 10.74.0.62, 10.74.0.63
