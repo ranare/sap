@@ -2,6 +2,23 @@
 # ha-sap-terraform-deployments project configuration file
 # Find all the available variables and definitions in the variables.tf file
 #################################
+# OPTION 1.
+# 
+# 
+#  disks_type       = "Premium_LRS,Premium_LRS,Premium_LRS,Premium_LRS,Premium_LRS"
+#  disks_size       = "256,256,256,256,64,512"
+#  caching          = "ReadOnly,ReadOnly,ReadOnly,ReadOnly,None"
+#  writeaccelerator = "false,false,false,false,false"
+#  # The next variables are used during the provisioning
+#  luns             = "0,1#2,3#4#5"
+#  names            = "data#log#usrsap#backup"
+#  lv_sizes         = "100#100#100#100"
+#  paths            = "/hana/data#/hana/log#/usr/sap#/hana/backup"
+#}
+#  
+
+
+
 
 # Region where to deploy the configuration
 az_region = "westeurope"
@@ -379,7 +396,7 @@ hana_inst_master = "//YOUR_STORAGE_ACCOUNT_NAME.file.core.windows.net/sapdata/sa
 # hana_cluster_fencing_mechanism = "sbd"
 
 #######################
-# SBD related variables
+# SBD related variables -> SBD (Storage-Based Death) , cluster communiation disk 
 #######################
 
 # In order to enable SBD, an ISCSI server is needed as right now is the only option
@@ -421,7 +438,8 @@ hana_inst_master = "//YOUR_STORAGE_ACCOUNT_NAME.file.core.windows.net/sapdata/sa
 #monitoring_srv_ip = "10.74.1.13"
 
 ########################
-# DRBD related variables
+# DRBD related variables -> DRBD (Distributed Replicated Block Device)
+# https://en.wikipedia.org/wiki/Distributed_Replicated_Block_Device
 ########################
 
 # Enable drbd cluster
