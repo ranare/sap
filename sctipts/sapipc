@@ -1,0 +1,15 @@
+#!/bin/csh
+
+setenv INS_NUM_ASCS `egrep '$SAPSYSTEMNAME|ASCS' /usr/sap/sapservices | awk '{print $4}' | gre
+p -o '..$'`
+setenv INS_NUM_PAS `egrep '$SAPSYSTEMNAME|D' /usr/sap/sapservices | awk '{print $4}' | grep -o
+ '..$'`
+
+# systemctl status sapinit
+# systemctl status SAP$SAPSYSTEMNAME\_$INS_NUM_ASCS.service
+# systemctl status SAP$SAPSYSTEMNAME\_$INS_NUM_PAS.service
+
+cleanipc $INS_NUM_ASCS remove
+cleanipc $INS_NUM_PAS
+
+ipcs | 
