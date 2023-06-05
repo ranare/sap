@@ -21,12 +21,11 @@
 
 #
 #
-# Option	|	       | /hana/data		       | /hana/log 		      | /hana/shared  | /usr/sap	  | /hana/backup 
-# 1 	    | Demo	 | 2x128GB LUN 0,1	   | 2x128GB LUN 2,3	  | 128GB LUN 4	  | 128GB LUN 5	| 128GB LUN 6
-# 2	      | Small	 | 3x512GB LUN 0,1,2	 | ← shared with data | 512GB LUN 3 	| 64GB LUN 4	| 1024GB LUN 5
-# 3	      | Medium | 4x512GB LUN 0,1,2,3 | 2x512GB ¹ LUN 4,5	| 1024GB LUN 6	| 64GB LUN 7	| 2x1024GB LUN 8,9
-# 4	      | Large	 | 3x1024GB LUN 0,1,2	 | 2x512GB ¹ LUN 3,4	| 1024GB LUN 5	| 64GB LUN 6	| 2x2048GB LUN 7,8
-
+# Option  |          | /hana/data          | /hana/log          | /hana/shared  | /usr/sap      | /hana/backup 
+# 1       | Demo     | 2x128GB LUN 0,1     | 2x128GB LUN 2,3    | 128GB LUN 4   | 128GB LUN 5   | 128GB LUN 6
+# 2	      | Small    | 3x512GB LUN 0,1,2   | ← shared with data | 512GB LUN 3   | 64GB LUN 4    | 1024GB LUN 5
+# 3	      | Medium   | 4x512GB LUN 0,1,2,3 | 2x512GB ¹ LUN 4,5  | 1024GB LUN 6  | 64GB LUN 7    | 2x1024GB LUN 8,9
+# 4	      | Large    | 3x1024GB LUN 0,1,2  | 2x512GB ¹ LUN 3,4  | 1024GB LUN 5  | 64GB LUN 6    | 2x2048GB LUN 7,8
 
 
 # Region where to deploy the configuration
