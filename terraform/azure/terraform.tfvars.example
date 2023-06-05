@@ -5,18 +5,27 @@
 # OPTION 1.
 # 
 # 
-#  disks_type       = "Premium_LRS,Premium_LRS,Premium_LRS,Premium_LRS,Premium_LRS"
-#  disks_size       = "256,256,256,256,64,512"
-#  caching          = "ReadOnly,ReadOnly,ReadOnly,ReadOnly,None"
-#  writeaccelerator = "false,false,false,false,false"
-#  # The next variables are used during the provisioning
-#  luns             = "0,1#2,3#4#5"
-#  names            = "data#log#usrsap#backup"
-#  lv_sizes         = "100#100#100#100"
-#  paths            = "/hana/data#/hana/log#/usr/sap#/hana/backup"
-#}
+#   disks_type       = "Premium_LRS,Premium_LRS,Premium_LRS,Premium_LRS,Premium_LRS"
+#   disks_size       = "256,256,256,256,64,512"
+#   caching          = "ReadOnly,ReadOnly,ReadOnly,ReadOnly,None"
+#   writeaccelerator = "false,false,false,false,false"
+#   # The next variables are used during the provisioning
+#   luns             = "0,1#2,3#4#5"
+#   names            = "data#log#usrsap#backup"
+#   lv_sizes         = "100#100#100#100"
+#   paths            = "/hana/data#/hana/log#/usr/sap#/hana/backup"
+# }
 #  
+#
+#
 
+#
+#
+# Option	|	       | /hana/data		       | /hana/log 		      | /hana/shared  | /usr/sap	  | /hana/backup 
+# 1 	    | Demo	 | 2x128GB LUN 0,1	   | 2x128GB LUN 2,3	  | 128GB LUN 4	  | 128GB LUN 5	| 128GB LUN 6
+# 2	      | Small	 | 3x512GB LUN 0,1,2	 | ← shared with data | 512GB LUN 3 	| 64GB LUN 4	| 1024GB LUN 5
+# 3	      | Medium | 4x512GB LUN 0,1,2,3 | 2x512GB ¹ LUN 4,5	| 1024GB LUN 6	| 64GB LUN 7	| 2x1024GB LUN 8,9
+# 4	      | Large	 | 3x1024GB LUN 0,1,2	 | 2x512GB ¹ LUN 3,4	| 1024GB LUN 5	| 64GB LUN 6	| 2x2048GB LUN 7,8
 
 
 
