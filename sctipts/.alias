@@ -1,0 +1,6 @@
+alias startsap=`~/startsap`
+alias startsap=`~/startsap`
+alias stopsap=`. ~/stopsap`
+alias infosap=`~/infosap`
+alias infohana=`~/infohana`
+alias ipcsap=`~/sapipc`
