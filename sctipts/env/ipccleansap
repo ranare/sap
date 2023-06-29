@@ -1,8 +1,8 @@
 #!/bin/csh
 psup=$(ps -ef | grep pmon | egrep -v grep | wc -l)
 
-setenv INS_NUM_ASCS `ls -la /usr/sap/$SAPSYSTEMNAME | egrep '$SAPSYSTEMNAME|ASCS' | awk '{print $NF}' | grep -o '..$'`
-setenv INS_NUM_PAS `ls -la /usr/sap/$SAPSYSTEMNAME | egrep '$SAPSYSTEMNAME|D' | awk '{print $NF}' | grep -o '..$'`
+setenv INS_NUM_ASCS `ls -la /usr/sap/$SAPSYSTEMNAME | egrep '$SAPSYSTEMNAME|ASCS' | grep -v $SAPSYSTEMNAME | awk '{print $NF}' | grep -o '..$'`
+setenv INS_NUM_PAS `ls -la /usr/sap/$SAPSYSTEMNAME | egrep '$SAPSYSTEMNAME|D' | grep -v $SAPSYSTEMNAME | awk '{print $NF}' | grep -o '..$'`
 
 
 # systemctl status sapinit
