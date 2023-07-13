@@ -2,4 +2,4 @@
 REM Autoupdate....
 REM %ORACLE_HOME%\bin\sqlplus /nolog @oralog.sql
  
-sqlplus /nolog @startdb.sql
+sqlplus /nolog @stopdb.sql
